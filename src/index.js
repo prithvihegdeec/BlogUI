@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import configureStore from './store/configureStore';
 import { startSetPosts } from './actions/posts';
+import { startSetAuthors } from './actions/authors';
 
 
 // setup redux store 
@@ -19,9 +20,8 @@ store.subscribe(() => {
 
 //all page reloads, data is to be fetched from the server and put in redux is written in index.js
 
-//store.dispatch(increment())
-
 store.dispatch(startSetPosts())
+store.dispatch(startSetAuthors())
 
 const ele = (
     <Provider store={store}>

@@ -1,13 +1,14 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux'
 
-//npm install --save redux-thunk
 import thunk from 'redux-thunk'
 import postReducer from '../reducers/postReducer'
+import authorReducer from '../reducers/authorReducer'
 
 
 const configureStore = () => {
     const store = createStore(combineReducers({
-        posts: postReducer
+        posts: postReducer,
+        authors: authorReducer
     }), applyMiddleware(thunk))
     return store
 }

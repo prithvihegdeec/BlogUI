@@ -33,7 +33,7 @@ function App(props) {
                 </Navbar>
                 <hr />
                 <div className="card bg-dark text-white">
-                    <img src={image} className="img-fluid" alt="Blog Image" />
+                    <img src={image} className="img-fluid" alt="Blog UI" />
                     <div className="card-img-overlay">
                         <Route path="/posts/:id" component={PostShow} />
                         <Route path="/authors/:id" component={AuthorId} />
